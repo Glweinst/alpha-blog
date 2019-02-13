@@ -1,3 +1,67 @@
-@import "bootstrap-sprockets";
+$navbar-default-bg: #5FA543;
 
+@import "bootstrap-sprockets";
 @import "bootstrap";
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.center {
+  text-align: center;
+}
+
+.jumbotron {
+  background-image: asset-url('handstand.JPG');
+  background-size: cover;
+  height: 1100px;
+}
+
+.jumbotron h1 {
+  color:#5FA543;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  font-size: 10em;
+  font-weight: bold;
+}
+
+.btn-xlg {
+  font-size: 1.7em;
+  background-color: black;
+}
+
+footer {
+  maring-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #663366;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
