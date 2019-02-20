@@ -1,7 +1,11 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:edit, :update, :show]
+  # this before_action allows us to delete ' @user = User.find(params[:id]) ' in edit, update, and show
+  # we define this method below
+  before_action :require_same_user, only [:edit, :update]
   
   def index
-    @users = User.all
+    @users = User.paginate(page: params[:page], per_page: 5)
   end
 
   def new
@@ -19,11 +23,11 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])   this is no longer necessary now we have before_action at top of code ^^
   end
 
   def update
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])   this is no longer necessary now we have before_action at top of code ^^
     if @user.update(user_params)
       flash[:success] = "Your account was updated successfully"
       redirect_to articles_path
@@ -33,7 +37,8 @@ class UsersController < ApplicationController
   end
   
   def show
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])   this is no longer necessary now we have before_action at top of code ^^
+    @user_articles = @user.articles.paginate(page: params[:page], per_page: 5)
   end
 
   private
@@ -41,5 +46,15 @@ class UsersController < ApplicationController
     params.require(:user).permit(:username, :email, :password)
   end
 
+  def set_user
+    @user = User.find(params[:id])
+  end
+  
+  def require_same_user
+    if current_user != @user
+      flash[:danger] = "You can only edit your own account"
+      redirect_to root_path
+    end
+  end
 end
 
