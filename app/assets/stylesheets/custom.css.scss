@@ -1,20 +1,36 @@
-$navbar-default-bg: #5FA543;
+$navbar-default-bg: black;
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 #logo {
+  margin-top: .6em;
   float: left;
+  font-family: 'Helvetica Neue', sans-serif; 
   font-size: 1.7em;
-  color: #fff;
+  color: gold;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
   font-weight: bold;
 }
 
 #logo:hover {
-  color: #fff;
+  color: gold;
   text-decoration: none;
+}
+
+.navbar-text {
+  color: gold;
+  font-size: 1.5em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
+}
+
+.dropdown-text {
+  color: gold;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
 }
 
 .center {
@@ -22,22 +38,29 @@ $navbar-default-bg: #5FA543;
 }
 
 .jumbotron {
-  background-image: asset-url('handstand.JPG');
+  background-image: asset-url('screening.JPG');
   background-size: cover;
-  height: 1100px;
+  height: 650px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .jumbotron h1 {
-  color:#5FA543;
+  color: gold;
   text-align: center;
   margin-bottom: 30px;
-  letter-spacing: -1px;
+  letter-spacing: 2px;
   font-size: 10em;
   font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
+  line-height: 1;
 }
 
 .btn-xlg {
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif;
   font-size: 1.7em;
+  color: gold;
   background-color: black;
 }
 
@@ -87,7 +110,7 @@ footer {
   margin-top: 45px;
   padding-top: 5px;
   border-top: 1px solid #eaeaea;
-  color: #5FA543;
+  color: black;
 }
 
 footer a:hover {
