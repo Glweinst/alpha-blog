@@ -56,6 +56,29 @@ $navbar-default-bg: black;
   line-height: 1;
 }
 
+.title-text {
+  color: gold;
+  background-color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-size: 6em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
+  line-height: 1;
+}
+
+.review-text {
+  color: gold;
+  background-color: black;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-size: 3em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
+  line-height: 1;
+}
+
 .btn-xlg {
   font-weight: bold;
   font-family: 'Helvetica Neue', sans-serif;
@@ -79,8 +102,9 @@ $navbar-default-bg: black;
 }
 
 .article-title {
+  text-align: center;
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 .article-body {
@@ -96,7 +120,7 @@ $navbar-default-bg: black;
 }
 
 .badge {
-  background-color: #CEF6F5;
+  background-color: gold;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
@@ -133,4 +157,8 @@ footer ul li {
 
 .tv {	
   cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEZJREFUeAGt0EEKgDAUA1En9z+0qEENhA+FvlUZQqE9Bnynlmlr2iVkSY66AHrg+MddSUiU6VuxqMhYquzcCvO6PZjhx5oTQ+8Bs3EshqIAAAAASUVORK5CYII=),auto;
+}
+
+.black-well {
+  background-color: black;
 }

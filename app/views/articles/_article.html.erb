@@ -1,21 +1,36 @@
 <% obj.each do |article| %>
   <div class="row">
     <div class="col-xs-8 col-xs-offset-2">
-      <div class="well well-lg">
+      <div class="black-well well well-lg">
+        <!--TITLE-->
         <div class="article-title">
           <%= link_to article.title, article_path(article) %>
         </div>
+        </br>
+        <!--RATING-->
+        <h4 class="description" style="color:gold"><strong>Rating:</strong>
+          <% article.rating.times do  %>
+             <span class="glyphicon glyphicon-star"></span>
+          <% end %>
+          <% blank_stars = (4-article.rating) %>
+          <% blank_stars.times do %>
+             <span class="glyphicon glyphicon-star-empty"></span>
+          <% end %>
+        </h4>
+        <!--REVIEW-->
         <div class="article-body">
-          <%= truncate(article.description, length: 100) %>
+         <h4 style="color:gold">Review:</h4><i style="color:gold"><%= truncate(article.description, length: 100) %></i>
           <div class="article-meta-details">
-            <small>Created by: <%= article.user.username if article.user %>,
+            <small style="color:gold">Created by: <%= article.user.username if article.user %>,
                     <%= time_ago_in_words(article.created_at) %> ago,
                     last updated: <%= time_ago_in_words(article.updated_at) %> ago</small>
           </div>  
         </div>
+       <!--CATEGORIES-->
         <% if article.categories.any? %>
-          <p>Categories: <%= render article.categories %></p>
+          <p style="color:gold">Categories: <%= render article.categories %></p>
         <% end %>
+        <!--ARTICLE ACTIONS-->
         <% if logged_in? and (current_user == article.user || current_user.admin?) %>
           <div class="article-actions">
             <%= link_to "Edit this review", edit_article_path(article), class:"btn btn-xs btn-primary" %>
