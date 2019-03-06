@@ -4,7 +4,7 @@
       <div class="black-well well well-lg">
         <!--TITLE-->
         <div class="article-title">
-          <%= link_to article.title, article_path(article) %>
+          <%= link_to article.title, article_path(article), class: "mini-title-text" %>
         </div>
         </br>
         <!--RATING-->
@@ -28,7 +28,7 @@
         </div>
        <!--CATEGORIES-->
         <% if article.categories.any? %>
-          <p style="color:gold">Categories: <%= render article.categories %></p>
+          <p style="color:gold">Genres: <%= render article.categories %></p>
         <% end %>
         <!--ARTICLE ACTIONS-->
         <% if logged_in? and (current_user == article.user || current_user.admin?) %>

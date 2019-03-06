@@ -1,14 +1,15 @@
-<h1 align="center">All Alpha Bloggers</h1>
+<h1 align="center">[ All Society Members ]</h1>
 <div align="center">
   <%= will_paginate %>
     <% @users.each do |user| %>
       <ul class="listing">
         <div class="row">
           <div class="well col-md-4 col-md-offset-4">
-            <li><%= link_to gravatar_for(user), user_path(user) %></li>
+            <!--<li><= link_to gravatar_for(user), user_path(user) %></li>-->
             <li class="article-title">
-              <%= link_to user.username, user_path(user) %>
+              <%= link_to user.username, user_path(user), class: "mini-title-text" %>
             </li>
+            </br>
             <li><small><%= pluralize(user.articles.count, "review") if user.articles %></small></li>
             <% if logged_in? and current_user.admin? %>
               <li><%= link_to "Delete this user", user_path(user), method: :delete, 

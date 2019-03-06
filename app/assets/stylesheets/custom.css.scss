@@ -3,6 +3,13 @@ $navbar-default-bg: black;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEZJREFUeAGt0EEKgDAUA1En9z+0qEENhA+FvlUZQqE9Bnynlmlr2iVkSY66AHrg+MddSUiU6VuxqMhYquzcCvO6PZjhx5oTQ+8Bs3EshqIAAAAASUVORK5CYII=),auto;
+  background-size: cover;
+  background-color: gold;
+  background-position: center;
+  background-attachment: fixed;}
+
 #logo {
   margin-top: .6em;
   float: left;
@@ -17,6 +24,20 @@ $navbar-default-bg: black;
 #logo:hover {
   color: gold;
   text-decoration: none;
+}
+
+h1 {
+  color: gold;
+  background-color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+  font-size: 6em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
+  line-height: 1;
 }
 
 .navbar-text {
@@ -60,9 +81,23 @@ $navbar-default-bg: black;
   color: gold;
   background-color: black;
   text-align: center;
+  text-decoration: underline overline;
   margin-bottom: 30px;
   letter-spacing: 2px;
   font-size: 6em;
+  font-weight: bold;
+  font-family: 'Helvetica Neue', sans-serif; 
+  line-height: 1;
+}
+
+.mini-title-text {
+  color: gold;
+  background-color: black;
+  text-align: center;
+  text-decoration: underline overline;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-size: 2em;
   font-weight: bold;
   font-family: 'Helvetica Neue', sans-serif; 
   line-height: 1;
@@ -79,6 +114,10 @@ $navbar-default-bg: black;
   line-height: 1;
 }
 
+.navbar-text {
+  color:gold;
+}
+
 .btn-xlg {
   font-weight: bold;
   font-family: 'Helvetica Neue', sans-serif;
@@ -93,8 +132,8 @@ $navbar-default-bg: black;
 }
 
 .article-actions {
-  border-top: 1px solid #eaeaea;
-  padding-top: 5px;
+  border-top: 4px solid gold;
+  padding-top: 25px;
 }
 
 .description {
@@ -159,6 +198,6 @@ footer ul li {
   cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAMAAACeyVWkAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAEZJREFUeAGt0EEKgDAUA1En9z+0qEENhA+FvlUZQqE9Bnynlmlr2iVkSY66AHrg+MddSUiU6VuxqMhYquzcCvO6PZjhx5oTQ+8Bs3EshqIAAAAASUVORK5CYII=),auto;
 }
 
-.black-well {
+.well {
   background-color: black;
 }
