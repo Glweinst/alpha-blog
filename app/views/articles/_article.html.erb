@@ -12,14 +12,14 @@
           <% article.rating.times do  %>
              <span class="glyphicon glyphicon-star"></span>
           <% end %>
-          <% blank_stars = (4-article.rating) %>
+          <% blank_stars = (5-article.rating) %>
           <% blank_stars.times do %>
              <span class="glyphicon glyphicon-star-empty"></span>
           <% end %>
         </h4>
         <!--REVIEW-->
         <div class="article-body">
-         <h4 style="color:gold">Review:</h4><i style="color:gold"><%= truncate(article.description, length: 100) %></i>
+         <h4 style="color:gold">Review:</h4><i style="color:gold">" <%= truncate(article.description, length: 100)%> "</i>
           <div class="article-meta-details">
             <small style="color:gold">Created by: <%= article.user.username if article.user %>,
                     <%= time_ago_in_words(article.created_at) %> ago,

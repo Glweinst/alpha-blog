@@ -4,7 +4,7 @@
   <div class='call-xs-12'> <!--following is based off of code from bootstrap site-->
     <%= form_for(@article, :html => {class: "form-horizontal", role: "form"}) do |f| %>
       <div class="form-group">
-        <div class="control-label col-sm-2">
+        <div class="control-label col-sm-2" >
           <%= f.label :title %>
         </div>
         <div class='col-sm-8'>
@@ -17,16 +17,16 @@
           <%= f.label :rating %>
         </div>
         <div class='col-sm-8'>
-          <%= f.number_field :rating, class: 'form-control', placeholder: 'Rating: 1-4 Stars' %>
+          <%= f.number_field :rating, class: 'form-control', placeholder: 'Rating: 1-5 Stars' %>
         </div>
       </div>
       
       <div class="form-group">
         <div class="control-label col-sm-2">  
-          <%= f.label :description %>
+          <%= f.label :description, "Review" %>
         </div>  
       <div class='col-sm-8'>
-        <%= f.text_area :description, rows: 10, class: 'form-control', placeholder: "Critique" %>
+        <%= f.text_area :description, rows: 10, class: 'form-control', placeholder: "Write your beautiful review here..." %>
       </div>
     </div>
    

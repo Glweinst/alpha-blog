@@ -2,14 +2,14 @@
 </br>
 <div class="black-well tv well col-xs-8 col-xs-offset-2">
   <!--TITLE-->
-  <h2 align="center" class="title-text">Title: <%= @article.title %></h2>
+  <h2 align="center" class="title-text"><%= @article.title %></h2>
     
   <!--RATING-->
   <h4 class="description review-text"><strong>Rating:</strong>
     <% @article.rating.times do  %>
        <span class="glyphicon glyphicon-star"></span>
     <% end %>
-    <% blank_stars = (4-@article.rating) %>
+    <% blank_stars = (5-@article.rating) %>
     <% blank_stars.times do %>
        <span class="glyphicon glyphicon-star-empty"></span>
     <% end %>
